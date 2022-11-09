@@ -18,3 +18,8 @@ conda activate picrust2
 #run picrust
 picrust2_pipeline.py -s seqs-output/dna-sequences.fasta -i asv_table.txt -o picrust2_out_pipeline -p 1
 ```
+
+## Run PICRUST pipeline withotu copy number correction 
+```
+picrust2_pipeline.py -s seqs-output/dna-sequences.fasta -i asv_table.txt -o picrust2_out_pipeline_no_norm -p 1 --skip_norm
+```
