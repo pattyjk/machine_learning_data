@@ -1,3 +1,9 @@
+## Clustering of reads
+```
+#data from Becker and Julia
+
+```
+
 ## Convert data
 ```
 #load QIIME
