@@ -2,7 +2,7 @@
 ```
 #data from Becker and Julia
 # import data from Becker
-qiime tools import --type EMPSingleEndSequences --input-path /mnt/d/files\ for\ doug/ --output-path becker_seqs.qza
+qiime tools import --type EMPSingleEndSequences --input-path ./becker_reads --output-path becker_seqs.qza
 
 #julia's already in QZA format so no script needed
 
