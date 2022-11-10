@@ -1,7 +1,21 @@
 ## Clustering of reads
 ```
 #data from Becker and Julia
+# import data from Becker
+qiime tools import --type EMPSingleEndSequences --input-path /mnt/d/files\ for\ doug/ --output-path becker_seqs.qza
 
+#julia's already in QZA format so no script needed
+
+
+#demultiplex Julia
+
+#demultiplex Becker
+qiime demux emp-single \
+  --i-seqs becker_seqs.qza \
+  --m-barcodes-file sample-metadata.tsv \
+  --m-barcodes-column barcode-sequence \
+  --o-per-sample-sequences becker_demux.qza \
+  --o-error-correction-details becker_demux-details.qza
 ```
 
 ## Convert data
