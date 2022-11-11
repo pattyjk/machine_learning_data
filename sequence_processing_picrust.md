@@ -12,8 +12,8 @@ qiime tools import --type EMPSingleEndSequences --input-path ./becker_reads --ou
 #demultiplex Becker
 qiime demux emp-single \
   --i-seqs becker_seqs.qza \
-  --m-barcodes-file sample-metadata.tsv \
-  --m-barcodes-column barcode-sequence \
+  --m-barcodes-file Atelopus1_Mapping_File.txt \
+  --m-barcodes-column BarcodeSequence \
   --o-per-sample-sequences becker_demux.qza \
   --o-error-correction-details becker_demux-details.qza
 ```
