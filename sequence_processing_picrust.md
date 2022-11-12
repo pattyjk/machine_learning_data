@@ -7,9 +7,6 @@ qiime tools import --type EMPSingleEndSequences --input-path ./becker_reads --ou
 
 #julia's already in QZA format so no script needed
 
-
-#demultiplex Julia
-
 #demultiplex Becker
 qiime demux emp-single \
   --i-seqs becker_seqs.qza \
@@ -51,11 +48,8 @@ qiime tools export \
   --output-path becker_seqs-output
   
   #convert QZA to ASV table for Becker data (already have for Julia's data)
-  
-  
-  
-  becker_asv_table.txt
-```
+  qiime tools export --input-path becker_table-deblur.qza --output-path becker_table
+ ```
 
 ## Run PICRUST pipeline
 ```
@@ -65,11 +59,11 @@ conda activate picrust2
 
 #run picrust pipeline
 picrust2_pipeline.py -s seqs-output/dna-sequences.fasta -i asv_table.txt -o julia_picrust2_out_pipeline -p 2
-picrust2_pipeline.py -s becker_seqs-output/dna-sequences.fasta -i becker_asv_table.txt -o becker_picrust2_out_pipeline -p 2
+picrust2_pipeline.py -s becker_seqs-output/dna-sequences.fasta -i becker_table/feature-table.biom -o becker_picrust2_out_pipeline -p 2
 ```
 
 ## Run PICRUST pipeline without copy number correction 
 ```
 picrust2_pipeline.py -s seqs-output/dna-sequences.fasta -i asv_table.txt -o picrust2_out_pipeline_no_norm -p 2 --skip_norm
-picrust2_pipeline.py -s becker_seqs-output/dna-sequences.fasta -i becker_asv_table.txt -o becker_picrust2_out_pipeline_no_norm -p 2 --skip_norm
+picrust2_pipeline.py -s becker_seqs-output/dna-sequences.fasta -i becker_table/feature-table.biom -o becker_picrust2_out_pipeline_no_norm -p 2 --skip_norm
 ```
