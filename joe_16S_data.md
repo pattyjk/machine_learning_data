@@ -39,4 +39,7 @@ conda activate picrust2
 
 #run picrust pipeline
 picrust2_pipeline.py -s seqs-output/dna-sequences.fasta -i joe_table/feature-table.biom -o joe_picrust2_out_pipeline -p 2
+
+#This is the set of poorly aligned input sequences to be excluded: 31d4a6bab0fb73ae9ecdbb2c56312f23, b64753dde8ecc2d3b01dcd70d7b3f3ac, 40522377b11cefe26edd3a4176a34ad8, f68a0ad180fb4683b512d118b1e6a835
+
   ```
