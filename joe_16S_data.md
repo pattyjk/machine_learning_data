@@ -29,7 +29,7 @@ qiime quality-filter q-score \
   
   #export rep set to fasta
    qiime tools export \
-  --input-path merged_repset_seqs.qza \
+  --input-path joe_rep-seqs-deblur.qza \
   --output-path seqs-output
   
 #run picrust
