@@ -17,7 +17,7 @@ cd raw_reads
 mkdir diamond_output
 for i in *.gz
 do
-diamond blastx -d swissprot --daa ./diamond_output/$i.daa --fast --query $i
+diamond blastx -d swissprot --daa ./diamond_output/$i.daa --query $i
 done
 
 #convert with MEGAN to summary per sample
