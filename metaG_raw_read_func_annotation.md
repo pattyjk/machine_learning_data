@@ -5,7 +5,7 @@
 #replace curl with wget on HPCC/Linux
 curl https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz -output nr.gz
 
-#decompress the file
+#decompress the file (gunzip -d on linux shell)
 unzip nr.gz
 
 #make a diamond database for analysis
