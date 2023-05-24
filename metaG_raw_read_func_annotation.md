@@ -9,10 +9,11 @@ curl https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz -output nr.gz
 unzip nr.gz
 
 #make a diamond database for analysis
-diamond makedb --in nr.gz --db nr
+diamond makedb --in nr -out --db nr
 
 #run diamond (on lab Mac is installed under anvio-7.1, if on cluster see sample job script for Chimera)
-source activate anvio-7.1
+#source activate anvio-7.1
+
 mv nt raw_reads
 cd raw_reads
 mkdir diamond_output
