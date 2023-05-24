@@ -10,7 +10,7 @@ unzip nr.gz
 #make a diamond database for analysis
 diamond makedb --in nr.gz --db nr
 
-#run diamond (on lab Mac is installed under anvio-7.1)
+#run diamond (on lab Mac is installed under anvio-7.1, if on cluster see sample job script for Chimera)
 source activate anvio-7.1
 mv nt raw_reads
 cd raw_reads
