@@ -2,6 +2,7 @@
 
 ```
 #get NCBI nr database, file is large (146 GB)
+#replace curl with wget on HPCC/Linux
 curl https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz -output nr.gz
 
 #decompress the file
