@@ -146,5 +146,5 @@ megahit -1 SRR6491180_1.fastq.gz -2 SRR6491180_2.fastq.gz --out-dir megahit_SRR6
 megahit -1 SRR6491181_1.fastq.gz -2 SRR6491181_2.fastq.gz --out-dir megahit_SRR6491181 --num-cpu-threads 64
 ```
 
-### Find genes with diamond
+### Find genes with humann3
 ```
