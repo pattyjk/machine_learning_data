@@ -1,6 +1,5 @@
 ## Clustering of reads
 ```
-#from https://docs.qiime2.org/2022.8/tutorials/moving-pictures/
 #data from Becker and Julia
 # import data from Becker
 qiime tools import --type EMPSingleEndSequences --input-path ./becker_reads --output-path becker_seqs.qza
